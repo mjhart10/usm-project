@@ -13,9 +13,7 @@ class Soal extends BaseController
         return view('ujian_mhs', $data);
 
     }
-    
-
-
-
+	
+  
 
 }

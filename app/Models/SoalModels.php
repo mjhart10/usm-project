@@ -5,8 +5,14 @@
 
     class SoalModels extends Model {
         protected $table = 'bank_soal';
-
-        protected $allowedFields = ['no_soal', 'isi_soal', 'option_a', 'option_b', 'option_c', 'option_d', 'jawaban'];
+        protected $primaryKey = 'no_soal';
+  
+        protected $allowedFields = ['no_soal', 'isi_soal', 'option_a', 'option_b', 'option_c', 'option_d', 'jawaban', 'bobot'];
+    
+       
+    
     }
+
+
 
 ?>

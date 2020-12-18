@@ -88,46 +88,46 @@
     <?php if($bank_soal): ?>
         <?php foreach ($bank_soal as $soal): ?>
         <div class="jumbotron">
-
-        
-
             <h4><?= $soal['no_soal']; ?></h4>
             <br>
             <h5><?= $soal['isi_soal']; ?></h5>
             <br>
+            
+            <form action="<?= base_url('hasilujian/store'); ?>" method="POST">
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="jawaban[<?= $soal['no_soal']; ?>]" id="optionsRadios2" value="A"
+                            required /><b> </b><?= $soal['option_a']; ?>
+                    </label>
+                </div>
 
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio"><?= $soal['option_a']; ?>
-                </label>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="jawaban[<?= $soal['no_soal']; ?>]" id="optionsRadios2" value="B"
+                            required /><b> </b><?= $soal['option_b']; ?>
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="jawaban[<?= $soal['no_soal']; ?>]" id="optionsRadios2" value="C"
+                         required /><b> </b><?=$soal['option_c']; ?>
+                    </label>
+                </div>
+
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="jawaban[<?= $soal['no_soal']; ?>]" id="optionsRadios2" value="D"
+                             required /><b> </b><?=$soal['option_d']; ?>
+                    </label>
+                </div>
+               
+                </div>
+                <?php endforeach; ?>
+                <?php endif; ?>
+                <input class="btn btn-primary" type="submit" name="tombolSubmit" value="Simpan">
+            </form>
             </div>
-
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio"><?= $soal['option_b']; ?>
-                </label>
-            </div>
-
-            <div class="form-check">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio" ><?= $soal['option_c']; ?>
-                </label>
-            </div>
-
-            <div class="form-check ">
-                <label class="form-check-label">
-                    <input type="radio" class="form-check-input" name="optradio" ><?= $soal['option_d']; ?>
-                </label>
-            </div>
-
-           
-
-        </div>
-
-        <?php endforeach; ?>
-            <?php endif; ?>
-
-    </div>
 
 
 

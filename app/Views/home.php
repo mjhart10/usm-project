@@ -63,17 +63,13 @@
   </ul>
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="gambar/corusel1.jpg"  width="" height="3000">
+      <img src="<?= base_url('asset/gambar/1.png')?> "  width="" height="3000">
     </div>
 
     <div class="carousel-item">
-      <img src="gambar/burung.jpg" alt="Chicago" width="" height="500">
+      <img src="<?= base_url('asset/gambar/urbniti.jpg')?>" alt="Chicago" width="" height="500">
     </div>
 
-    <div class="carousel-item">
-      <img src="1.png" alt="New York" width="1100" height="500"> 
-    </div>
-    
   </div>
   <a class="carousel-control-prev" href="#demo" data-slide="prev">
     <span class="carousel-control-prev-icon"></span>
@@ -83,7 +79,7 @@
   </a>
 </div>
 <br><br><br>
-<h2>Informasi Prodi</h2>
+<h2 class="display-4">Informasi Prodi</h2>
 <br>
 <br>
 
@@ -230,7 +226,7 @@
 
 
     <!-- Footer -->
-<footer class="page-footer font-small blue pt-3">
+<footer class="page-footer font-small green pt-3">
 
 <!-- Footer Links -->
 <div class="container-fluid text-center text-md-left">

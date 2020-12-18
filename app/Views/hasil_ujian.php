@@ -88,7 +88,31 @@
                 <div class="jumbotron">
 
                     <h2 class="font-weight-bold" style="text-align: center">Peraturan Ujian </h2>
+                                        
+                    <?php 
+                        $i = 1;
+                        $jwb = "jawaban"; 
+                        $nilai = array();
+                        $jumlahNilai = 0;
+                        $jumlah = 0;
 
+                    ?>
+                    <?php foreach ($bank_soal as $s):
+                        
+                        if($s['jawaban']==$hasil[$jwb . $i]){
+                            $nilai[$i-1]=1;
+                            
+                        }else{
+                            $nilai[$i-1]=0;
+                        }
+                        $jumlah += $nilai[$i-1];
+                        
+
+                        $i++;    
+                    endforeach;
+                        $jumlahNilai = 100/18*$jumlah;
+                        echo $jumlahNilai; 
+                   ?>
 
                     <h5>Waktu Pengerjaan : 120 Menit </h5>
                     <h5>Jumlah Soal : 40 Soal </h5>
@@ -96,15 +120,7 @@
                     <br>
                     <br>
 
-                    <dt>Peraturan 1</dt>
-                    <dd>Bacalah Dengan teliti Tiap-Tiap Soal Sebelum Menjawab</dd>
-                    <dt>Peraturan 2</dt>
-                    <dd>Ujian Ini Bersifat Close Book, Dilarang Membuka Buku Ataupun Web Browser Google</dd>
-                    <dt>Peraturan 3</dt>
-                    <dd>Dilarang Mencontek Saat Ujian</dd>
-                    <dt>Peraturan 4</dt>
-                    <dd>Pastikan Untuk Mengecek Kembali Setiap Soal Sebelum Melakukan Submit</dd>
-                    <br>
+                   
 
                     <div class="form-check-inline">
                         <label class="form-check-label">

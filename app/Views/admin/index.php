@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>Dashboard - DWAdmin</title>
+	<title>USMAdmin</title>
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="<?= base_url('asset/vendors/bootstrap/css/bootstrap.css')?>">
@@ -42,18 +42,13 @@
 					</div>
 				</li>
 
-				<li>
-					<a href="notifications.html" class="transition">
-						<i class="las la-bell"></i>
-						<span class="badge badge-danger notif">5</span>
-					</a>
-				</li>
+				
 
 			<li>
 				<div class="dropdown">
 					<div class="dropdown-toggle" id="dropdownProfile" data-toggle="dropdown" aria-haspopup="true"
 						aria-expanded="false">
-						<img src="assets/images/avatar/avatar-2.png" alt="Profile">
+						<img src="<?= base_url();?>/asset/images/avatar/avatar-2.png" alt="Profile">
 					</div>
 					<div class="dropdown-menu" aria-labelledby="dropdownProfile">
 						
@@ -79,7 +74,7 @@
 	<!--Sidebar-->
 	<div class="sidebar transition overlay-scrollbars">
 		<div class="logo">
-			<h2 style="font-weight: 700;" class="mb-0">DW<span style="font-weight: 500;">Admin</span></h2>
+			<h2 style="font-weight: 700;" class="mb-0">Usm<span style="font-weight: 500;">Admin</span></h2>
 		</div>
 
 		<div class="sidebar-items">
@@ -101,9 +96,9 @@
 					<li id="headingOne">
 						<a href="onclick();" class="submenu-items" data-toggle="collapse" data-target="#collapseOne"
 							aria-expanded="true" aria-controls="collapseOne">
-							<i class="fas la-meh-blank"></i>
+							<i class="fas fa-users-cog"></i>
 							<span>Components</span>
-							<i class="fas la-angle-right"></i>
+							<i class="fas fa-users-cog"></i>
 						</a>
 					</li>
 					<div id="collapseOne" class="collapse submenu" aria-labelledby="headingOne" data-parent="#sidebar-items">
@@ -158,68 +153,7 @@
 					<?php endif; ?>
 
 
-					<p class="menu">Pages</p>
-
-					<li id="headingThree">
-						<a href="onclick();" class="submenu-items" data-toggle="collapse" data-target="#collapsefour"
-							aria-expanded="true" aria-controls="collapsefour">
-							<i class="fas la-folder"></i>
-							<span>Auth</span>
-							<i class="fas la-angle-right"></i>
-						</a>
-					</li>
-					<div id="collapsefour" class="collapse submenu" aria-labelledby="headingThree"
-						data-parent="#sidebar-items">
-						<ul>
-
-							<li>
-								<a href="signin.html">Login</a>
-							</li>
-
-							<li>
-								<a href="signup.html">Register</a>
-							</li>
-
-							<li>
-								<a href="forgot.html">Forgot Password</a>
-							</li>
-
-						</ul>
-					</div>
-
-					<li id="headingThree">
-						<a href="onclick();" class="submenu-items" data-toggle="collapse" data-target="#errros"
-							aria-expanded="true" aria-controls="errros">
-							<i class="las la-exclamation-circle"></i>
-							<span>Errors</span>
-							<i class="fas la-angle-right"></i>
-						</a>
-					</li>
-					<div id="errros" class="collapse submenu" aria-labelledby="headingThree"
-						data-parent="#sidebar-items">
-						<ul>
-
-							<li>
-								<a href="errors-405.html">405</a>
-							</li>
 					
-							<li>
-								<a href="errors-404.html">404</a>
-							</li>
-
-							<li>
-								<a href="errors-403.html">403</a>
-							</li>
-
-						</ul>
-					</div>
-
-					<li>
-						<a href="Plugins.html" class="items">
-							<i class="fas la-pencil-ruler"></i>
-							<span>Plugins</span>
-						</a>
-					</li>
 					
 					
 				</ul>
