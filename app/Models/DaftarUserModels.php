@@ -7,6 +7,6 @@
         protected $table = 'mahasiswa';
         protected $primaryKey = 'id_mhs';
 
-        protected $allowedFields = ['id_mhs', 'nama', 'ttl', 'nik', 'jenis_kelamin', 'alamat', 'kode_pos', 'no_handphone', 'email', 'asal_sekolah'];
+        protected $allowedFields = ['id_mhs', 'nama', 'ttl', 'nik', 'jenis_kelamin', 'alamat', 'kode_pos', 'no_handphone', 'email', 'asal_sekolah', 'pilih_prodi'];
     }
 ?>

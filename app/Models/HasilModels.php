@@ -4,9 +4,10 @@
     use CodeIgniter\Model;
 
     class HasilModels extends Model {
-        protected $table = 'hasil_ujian';
+        protected $table = 'nilai_mhs';
+        protected $primaryKey = 'nilai';
 
-        protected $allowedFields = ['no_soal', 'id_hasil', 'bobot', 'jumlah_bobot'];
+        protected $allowedFields = ['nilai'];
     }
 
 

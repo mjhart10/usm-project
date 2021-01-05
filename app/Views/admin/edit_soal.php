@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	<title>USMAdmin</title>
+	<title>Dashboard - DWAdmin</title>
 
 	<!-- Bootstrap CSS-->
 	<link rel="stylesheet" href="<?= base_url('asset/vendors/bootstrap/css/bootstrap.css')?>">
@@ -164,95 +164,83 @@
 	<div class="sidebar-overlay"></div>
 
 
+
 	<!--Content Start-->
 	<div class="content transition">
 		<div class="container-fluid dashboard">
 			<h3>Dashboard</h3>
 		
-			<div class="row">
+			<div class="container">
+                    <div class="row">
+                        <div class="col-sm-9">
+                            <h2>Edit Mahasiwa</h2>
+                            <form action="<?= base_url('Admin/MasterSoal/update'); ?>" method="POST">
+                                <input type="hidden" name="no_soal" value="<?= $bank_soal['id_mhs'] ?>">
+                                <div class="form-grup">
+                                    <label for="name">isi soal</label>
+                                    <br>
+                                    <input type="text" name="isi_soal" class="form-control" id="name" placeholder="Masukkan Nama"
+                                    value="<?= $bank_soal['isi_soal'] ?>">
+                                    <br>
+                                </div>
+                                <div class="form-grup">
+                                    <label for="name">Opsi a</label>
+                                    <br>
+                                    <input type="text" name="option_a" class="form-control" id="email" placeholder="Masukkan Email"
+                                    value="<?= $bank_soal['option_a'] ?>">
+                                    <br>
+                                </div>
+                                 <div class="form-grup">
+                                    <label for="name">Opsi B</label>
+                                    <br>
+                                    <input type="text" name="option_b" class="form-control" id="contact_no" placeholder="Masukkan Nomor Contact"
+                                    value="<?= $bank_soal['option_b'] ?>">
+                                    <br>
+                                </div>
+                                <div class="form-grup">
+                                    <label for="contact">Opsi C</label>
+                                    <br>
+                                    <input type="text" name="option_c" class="form-control" id="contact_no" placeholder="Masukkan Nomor Contact"
+                                    value="<?= $bank_soal['option_c'] ?>">
+                                    <br>
+                                </div>
+                                <div class="form-grup">
+                                    <label for="name">Opsi D</label>
+                                    <br>
+                                    <input type="text" name="option_d" class="form-control" id="contact_no" placeholder="Masukkan Nomor Contact"
+                                    value="<?= $bank_soal['option_d'] ?>">
+                                    <br>
+                                </div>
+                                <div class="form-grup">
+                                    <label for="name">Jawaban</label>
+                                    <br>
+                                    <input type="text" name="jawaban" class="form-control" id="contact_no" placeholder="Masukkan Nomor Contact"
+                                    value="<?= $bank_soal['jawaban'] ?>">
+                                    <br>
+                                </div>
+                                
+                
+                                <div class="form-grup">
+                                    <button type="submit" id="send_form" class="btn btn-success">Submit</button>
+                                    <a href="<?= base_url('Admin/MasterMhs/index')?>" class="btn btn-danger">Close</a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+		
+		</div>
 
-			<?php if (in_groups('admin')) :?>
-				<div class="col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-4 d-flex align-items-center">
-									<i class="las la-user-graduate icon-home bg-primary text-light"></i>
-								</div>
-								<div class="col-8">
-									<h5>Mahasiswa</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-4 d-flex align-items-center">
-									<i class="las la-id-card  icon-home bg-success text-light"></i>
-								</div>
-								<div class="col-8">
-									<h5>Master Marketing</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-4 d-flex align-items-center">
-									<i class="far fa-folder-open   icon-home bg-info text-light"></i>
-								</div>
-								<div class="col-8">
-									<h5>Bank Soal</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-			
-				</div>
-				
-	</div>
-	<h1>Welcome Admin</h1>
-	<?php endif;?>
-
-
-	<?php if (in_groups('marketing')) :?>
-				<div class="col-md-6 col-lg-3">
-					<div class="card">
-						<div class="card-body">
-							<div class="row">
-								<div class="col-4 d-flex align-items-center">
-									<i class="las la-user-graduate icon-home bg-primary text-light"></i>
-								</div>
-								<div class="col-8">
-									<h5>Master Mahasiswa</h5>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-
-
-				
-			
-				</div>
-		<h1>Welcome Admin Marketing</h1>		
 	</div>
 
-	
-	<?php endif;?>
+	<!-- Footer -->
+	<div class="footer transition">
+		<hr>
+		<p>
+			&copy; 2020 All Right Reserved by <a href="#" target="_blank">DWAdmin</a>
+		</p>
+	</div>
 
-
-	
 	<!-- Loader -->
 	<div class="loader">
 		<div class="spinner-border text-light" role="status">

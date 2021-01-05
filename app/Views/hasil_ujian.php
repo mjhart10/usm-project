@@ -74,7 +74,7 @@
             <div class="img3"> <img src=> </div>
             <div class="text-center">
                 <div class="text2">
-                    <h1 class="display-4">Peraturan Ujian</h1>
+                    <h1 class="display-4">Hasil Ujian</h1>
                 </div>
             </div>
 
@@ -87,7 +87,7 @@
             
                 <div class="jumbotron">
 
-                    <h2 class="font-weight-bold" style="text-align: center">Peraturan Ujian </h2>
+                    <h2 class="font-weight-bold" style="text-align: center">Hasil Ujian </h2>
                                         
                     <?php 
                         $i = 1;
@@ -111,39 +111,37 @@
                         $i++;    
                     endforeach;
                         $jumlahNilai = 100/18*$jumlah;
-                        echo $jumlahNilai; 
+                        //echo $jumlahNilai; 
                    ?>
 
-                    <h5>Waktu Pengerjaan : 120 Menit </h5>
-                    <h5>Jumlah Soal : 40 Soal </h5>
+                    <h3>Nilai Ujian Anda Adalah</h3>
+                   <h2><?= $jumlahNilai;?></h2>
 
+            
                     <br>
                     <br>
 
-                   
-
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Saya Setuju Dan Sudah Membaca Peraturan Diatas
-                        </label>
-                    </div>
                     <br><br>
-
-                    <div>
-                    <a href="<?= base_url('soal/ujian') ?>" class="btn btn-success">Mulai Ujian</a>
-                    </div>
-                  
-
                 </div><br>
+
+                <form action="<?= base_url('hasilujian/inputnilai'); ?>" method="POST">
+                                <input type="hidden" name="nilai" value="<?= $jumlahNilai;?>">
+                               
+                                <div class="form-grup">
+                                    <button type="submit" id="send_form" class="btn btn-success">Submit</button>
+                                    
+                                </div>
+                                
+                                
+                            </form>
 
     </div>
 
     
 
 
-    <div class="jumbotron text-center bg-dark" style="margin-bottom:0">
-        <p>Footer</p>
-        <p style="color:white">Copyright Website By Muhmmad Juliansyah | informtika 2020</p>
+    <div class="jumbotron text-center bg-success" style="margin-bottom:0">
+        <p style="color:white">Ujian Saringan Masuk (USM) | Universitas Pembangunan Jaya 2020</p>
     </div>
     </div>
 

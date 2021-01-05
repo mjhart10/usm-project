@@ -128,6 +128,22 @@
                             <input type="text" name="nama" class="form-control" placeholder="" id="">
                         </div>
 
+                        <p>Pilih Prodi</p>
+                        <h4><select name="pilih_prodi">
+                        <option value="Informatika">Informatika</option>
+                        <option value="Komunikasi">Komunikasi</option>
+                        <option value="Teknik Sipil">Teknik Sipil</option>
+                        <option value="Desain Produk">Desain Produk</option>
+                        <option value="Desain Komunikasi Visual">Desain Komunikasi Visual</option>
+                        <option value="Psikologi">Psikologi</option>
+                        <option value="Manajemen">Manajemen</option>
+                        <option value="Akuntansi">Akuntansi</option>
+                        <option value="Arsitektur">Arsitektur</option>
+                        <option value="Sistem Informasi">Sistem Informasi</option>
+                        </select>
+                        <br>
+                        <br>
+
                         <div class="form-group">
                             <label for="text">Tempat & Tanggal Lahir</label>
                             <input type="text" name="ttl" class="form-control" placeholder="" id="">
@@ -168,9 +184,11 @@
                             <textarea class="form-control" name="alamat" rows="5" id="comment"></textarea>
                         </div> 
 
+                       
+
 
                         <input class="btn btn-primary" type="submit" name="tombolSubmit" value="Simpan">
-                        <a href="<?= base_url('/mahasiswa/rule') ?>" class="btn btn-danger">Mulai Ujian</a>
+                        <!--<a href="<?= base_url('/mahasiswa/rule') ?>" class="btn btn-danger">Mulai Ujian</a>-->
                     </form>
 
 
@@ -181,12 +199,10 @@
     
 
 
-    <div class="jumbotron text-center bg-dark" style="margin-bottom:0">
-        <p>Footer</p>
-        <p style="color:white">Copyright Website By Muhmmad Juliansyah | informtika 2020</p>
+    <div class="jumbotron text-center bg-success" style="margin-bottom:0">
+        <p style="color:white">Ujian Saringan Masuk (USM) | Universitas Pembangunan Jaya 2020</p>
     </div>
     </div>
-
 </body>
 
 </html>

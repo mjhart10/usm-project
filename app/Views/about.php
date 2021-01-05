@@ -74,7 +74,7 @@
             <div class="img3"> <img src=> </div>
             <div class="text-center">
                 <div class="text2">
-                    <h1 class="display-4">Peraturan Ujian</h1>
+                    <h1 class="display-4">About USM</h1>
                 </div>
             </div>
 
@@ -87,33 +87,19 @@
             
                 <div class="jumbotron">
 
-                    <h2 class="font-weight-bold" style="text-align: center">Peraturan Ujian </h2>
+                    <h2 class="font-weight-bold" style="text-align: center">About USM </h2>
 
+
+                  
 
                     <br>
                     <br>
 
-                    <dt>Peraturan 1</dt>
-                    <dd>Bacalah Dengan teliti Tiap-Tiap Soal Sebelum Menjawab</dd>
-                    <dt>Peraturan 2</dt>
-                    <dd>Ujian Ini Bersifat Close Book, Dilarang Membuka Buku Ataupun Web Browser Google</dd>
-                    <dt>Peraturan 3</dt>
-                    <dd>Dilarang Mencontek Saat Ujian</dd>
-                    <dt>Peraturan 4</dt>
-                    <dd>Pastikan Untuk Mengecek Kembali Setiap Soal Sebelum Melakukan Submit</dd>
-                    <br>
+                   
+                    <dd style="">Proses USM adalah sebuah proses yang penting saat calon mahasiswa baru masuk kampus. Namun, di UPJ proses USM masih dilakukan secara manual, sehingga proses USM dirasa membuang banyak waktu, khususnya bagi calon mahasiswa yang berada di luar kota Tangerang. Oleh sebab itu, diperlukan sebuah sistem yang dapat memfasilitasi mahasiswa baru dalam melakukan proses Ujian Saringan Masuk, yaitu sebuah aplikasi berbasis website. Dengan adanya aplikasi berbasis web ini, proses Ujian Saringan Masuk bisa mempermudah calon mahasiswa baru untuk mendaftar ke UPJ, karena proses USM menjadi lebih mudah, dan efisien.</dd>
+                  
 
-                    <div class="form-check-inline">
-                        <label class="form-check-label">
-                            <input type="checkbox" class="form-check-input" value="">Saya Setuju Dan Sudah Membaca Peraturan Diatas
-                        </label>
-                    </div>
-                    <br><br>
-
-                    <div>
-                    <a href="<?= base_url('soal/ujian') ?>" class="btn btn-success">Mulai Ujian</a>
-                    </div>
-                    <br>
+                   
                   
 
                 </div><br>

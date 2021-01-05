@@ -88,11 +88,16 @@
     <?php if($bank_soal): ?>
         <?php foreach ($bank_soal as $soal): ?>
         <div class="jumbotron">
-            <h4><?= $soal['no_soal']; ?></h4>
-            <br>
-            <h5><?= $soal['isi_soal']; ?></h5>
-            <br>
+        
+
+            <tr>
+                  <td width="17"><font color="#000000"><?= $soal['no_soal']; ?>.</font></td>
+                  <td width="430"><font color="#000000"><?= $soal['isi_soal']; ?></font></td>
+                  <br>
+
+            </tr>
             
+            <br>
             <form action="<?= base_url('hasilujian/store'); ?>" method="POST">
                 <div class="radio">
                     <label>
@@ -126,15 +131,16 @@
                 <?php endforeach; ?>
                 <?php endif; ?>
                 <input class="btn btn-primary" type="submit" name="tombolSubmit" value="Simpan">
+                <br>
             </form>
+            <br>
             </div>
 
 
 
 
-    <div class="jumbotron text-center bg-dark" style="margin-bottom:0">
-        <p>Footer</p>
-        <p style="color:white">Copyright Website By Muhmmad Juliansyah | informtika 2020</p>
+            <div class="jumbotron text-center bg-success" style="margin-bottom:0">
+        <p style="color:white">Ujian Saringan Masuk (USM) | Universitas Pembangunan Jaya 2020</p>
     </div>
     </div>
 

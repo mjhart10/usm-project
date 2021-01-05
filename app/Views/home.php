@@ -43,13 +43,10 @@
 <!-- Links -->
 <ul class="navbar-nav ">
   <li class="nav-item">
-    <a class="nav-link" href="#">Home</a>
+    <a class="nav-link" href="<?= base_url('home/index')?>">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Prodi</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">About</a>
+    <a class="nav-link" href="<?= base_url('home/about')?>">About</a>
   </li>
 </ul>
 

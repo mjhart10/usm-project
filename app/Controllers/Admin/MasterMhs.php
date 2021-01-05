@@ -41,6 +41,7 @@
             $id_mhs=$this->request->getVar('id_mhs');
             $data=[
                 'nama'=>$this->request->getVar('nama'),
+                'pilih_prodi'=>$this->request->getVar('pilih_prodi'),
                 'ttl'=>$this->request->getVar('ttl'),
                 'nik' => $this->request->getVar('nik'),
                 'jenis_kelamin'=>$this->request->getVar('jenis_kelamin'),

@@ -2,21 +2,22 @@
     namespace App\Controllers\Admin;
     use App\Controllers\BaseController;
     use App\Models\MarketingModels;
+    use App\Models\PenggunaModels;
 
     class MasterMkt extends BaseController {
-        public function index() {
+        public function index($id=2) {
             //echo "Ini hamanan index pada controller users";
             //buat object dari class UserModel
-            $model = new MarketingModels();
+            $model2 = new PenggunaModels();
             
             //load seluruh data
-            $data['marketing'] = $model->orderBy('id_marketing', 'ASC')->findAll();
+            $data['user'] = $model2->where('id', $id)->first();
 
             return view('admin/view_mkt', $data);
         }
         public function create() {
 
-            return view('admin/create_mkt');
+            return view('Myth\Auth\Views\register');
         }
         public function store() {
             $model=new MarketingModels();

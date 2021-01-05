@@ -7,6 +7,11 @@ class Home extends BaseController
 		return view('home.php');
 	}
 
+	public function about()
+	{
+		return view('about.php');
+	}
+
 	//--------------------------------------------------------------------
 
 }

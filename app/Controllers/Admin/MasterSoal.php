@@ -4,6 +4,7 @@
     use App\Models\SoalModels;
 
     class MasterSoal extends BaseController {
+
         public function index() {
             //echo "Ini hamanan index pada controller users";
             //buat object dari class UserModel
@@ -34,30 +35,27 @@
 
             return redirect()->to(base_url('admin/mastersoal/index'));
         }
-        public function edit($id_mhs = null){
-            $model = new DaftarUserModels();
-            $data['mahasiswa'] = $model->where('id_mhs',$id_mhs)->first();
+        public function edit($no_soal = null){
+            $model = new SoalModels();
+            $data['bank_soal'] = $model->where('no_soal',$no_soal)->first();
 
-            return view('admin/edit_mhs',$data);
+            return view('Admin/edit_soal',$data);
         }
         public function update(){
-            $model=new DaftarUserModels();
-            $id_mhs=$this->request->getVar('id_mhs');
+            $model=new SoalModels();
+            $no_soal=$this->request->getVar('no_soal');
             $data=[
-                'nama'=>$this->request->getVar('nama'),
-                'ttl'=>$this->request->getVar('ttl'),
-                'nik' => $this->request->getVar('nik'),
-                'jenis_kelamin'=>$this->request->getVar('jenis_kelamin'),
-                'alamat'=>$this->request->getVar('alamat'),
-                'kode_pos'=>$this->request->getVar('kode_pos'),
-                'no_handphone'=>$this->request->getVar('no_handphone'),
-                'email'=>$this->request->getVar('email'),
-                'asal_sekolah'=>$this->request->getVar('asal_sekolah'),
-
+                'isi_soal'=>$this->request->getVar('isi_soal'),
+                'option_a'=>$this->request->getVar('option_a'),
+                'option_b' => $this->request->getVar('option_b'),
+                'option_c'=>$this->request->getVar('option_c'),
+                'option_d'=>$this->request->getVar('option_d'),
+                'jawaban'=>$this->request->getVar('jawaban'),
+                
             ];
-            $save=$model->update($id_mhs,$data);
+            $save=$model->update($no_soal,$data);
 
-            return redirect()->to(base_url('public/admin/mastermhs/index'));          
+            return redirect()->to(base_url('Admin/MasterSoal/index'));          
         }
         public function delete($no_soal = null){
             $model = new SoalModels();

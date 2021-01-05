@@ -32,8 +32,8 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
-$routes->get('/admin/mastersoal/', 'admin::index', ['filter' => 'role:admin']);
-$routes->get('/admin/mastersoal/index', 'admin::index', ['filter' => 'role:admin']);
+$routes->get('/admin/mastersoal/', 'admin/mastersoal::index', ['filter' => 'role:admin']);
+$routes->get('/admin/mastersoal/index', 'admin/mastersoal::index', ['filter' => 'role:admin']);
 
 
 

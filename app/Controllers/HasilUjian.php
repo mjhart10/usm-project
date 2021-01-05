@@ -5,6 +5,7 @@
     use App\Models\JawabanModels;
     use App\Models\SoalModels;
 
+
     class HasilUjian extends BaseController {
 
         public function index() {
@@ -21,6 +22,18 @@
 
             return view('hasil_ujian', $data);
             
+        }
+
+        public function inputnilai() {
+            $model_nilai=new HasilModels();
+
+            $data=[
+                'nilai'=>$this->request->getVar('nilai'),
+            
+            ];
+            $save=$model_nilai->insert($data);
+
+            return redirect()->to(base_url('home/index'));
         }
 
         public function store(){
