@@ -128,18 +128,22 @@
                                 <input type="hidden" name="nilai" value="<?= $jumlahNilai;?>">
                                
                                 <div class="form-grup">
-                                    <button type="submit" id="send_form" class="btn btn-success">Submit</button>
-                                    
+                                    <button type="submit" id="send_form"  class="btn btn-primary">Kembali Ke Home</button>
+                                    <br>
                                 </div>
                                 
                                 
                             </form>
 
+                            <br>
+                            <br>
+                            <a href="<?= base_url('hasilujian/history'); ?>" class="btn btn-info" role="button">Lihat History Ujian</a>
+
     </div>
 
     
 
-
+    <br>
     <div class="jumbotron text-center bg-success" style="margin-bottom:0">
         <p style="color:white">Ujian Saringan Masuk (USM) | Universitas Pembangunan Jaya 2020</p>
     </div>

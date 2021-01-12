@@ -8,6 +8,14 @@
 
     class HasilUjian extends BaseController {
 
+        public function history() {
+            $model_jawab = new JawabanModels();
+            
+            //load seluruh data
+            $data['hasil'] = $model_jawab->orderBy('id_jawaban', 'ASC')->findAll();
+
+            return view('history_ujianmhs', $data);
+        }
         public function index() {
             //echo "Ini hamanan index pada controller users";
             //buat object dari class UserModel
